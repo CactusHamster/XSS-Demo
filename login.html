@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Login</title>
+    <link rel="stylesheet" href="colors.css">
+</head>
+<style>
+    * {
+        margin: 0px;
+        padding: 0px;
+        box-sizing: border-box;
+        font-family: 'Poppins',sans-serif;
+    }
+    ::selection {
+
+    }
+    html, body {
+        color: var(--text);
+        height: 100%;
+        width: 100%;
+        display: grid;
+        place-items: center;
+        background-image: linear-gradient(to right, var(--red), var(--orange), var(--yellow), var(--green), var(--blue), var(--purple));
+    }
+    .bigwhite {
+        position:absolute;
+        top: 0px;
+        bottom: 0px;
+        background-color: rgba(236, 239, 244, 0.486);
+        width: 100%;
+        height: 100%;
+    }
+    .container {
+        background-color: var(--foreground);
+        max-width: 350px;
+        width: 100%;
+        padding: 25px 30px;
+        border-radius: 5px;
+        box-shadow: 0 10px 10px rgba(0, 0, 0, 0.15);
+    }
+    .container .title {
+        position: relative;
+        margin: 20px 0 10px 0;
+        font-size: 30px;
+        font-weight: 600;
+    }
+    .container .input-wrap {
+        position: relative;
+        height: 45px;
+        width: 100%;
+        margin-top: 25px;
+    }
+    .container .input-wrap input {
+        background-color: var(--foreground);
+        width: 100%;
+        height: 100%;
+        font-size: 16px;
+        outline: none;
+        border: none;
+    }
+    .container .underline::before {
+        position: absolute;
+        left: 0px;
+        bottom: 0px;
+        width: 100%;
+        height: 2px;
+        background: black;
+        content: '';
+    }
+    .container .underline::after {
+        position: absolute;
+        left: 0px;
+        bottom: 0px;
+        height: 2px;
+        width: 100%;
+        transform: scaleX(0);
+        transform-origin: left;
+        transition: all 0.3s ease;
+        background: black;
+        content: '';
+    }
+    .container .input-wrap input:focus ~ .underline::after,
+    .container .input-wrap input:valid ~ .underline::after {
+        transform: scaleX(1);
+        transform-origin: left;
+    }
+    .container .button {
+        margin: 40px 0px 20px 0px;
+    }
+    .container .input-wrap input[type="button"] {
+        cursor: pointer;
+        font-size: 17px;
+        border-radius: 5px;
+        transition: all 0.3s ease;
+        background-color: var(--background);
+        /* border-bottom: 2px solid; */
+        border-color: black;
+    }
+    .container .input-wrap input[type="button"]:hover {
+        letter-spacing: 1px;
+    }
+</style>
+<body>
+    <div class="bigwhite"></div>
+    <div class="container">
+        <div>
+        <div class="title">Login</div>
+        <div class="input-wrap underline">
+            <input type="text" placeholder="Enter username" required id="username-box">
+            <div class="underline"></div>
+        </div>
+        <div class="input-wrap underline">
+            <input type="password" placeholder="Enter password" required id="password-box">
+            <div class="underline"></div>
+        </div>
+        <div class="input-wrap button">
+            <input type="button" value="Continue" id="continue-button">
+        </div>
+        </div>
+    </div>
+    <script src="./dist/login.js"></script>
+</body>
+</html>
