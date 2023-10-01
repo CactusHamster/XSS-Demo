@@ -1,9 +1,0 @@
-{
-    "include": [ "src" ],
-    "compilerOptions": {
-        "outDir": "dist",
-        "strict": true,
-        "forceConsistentCasingInFileNames": true,
-        "lib": ["ESNext", "DOM"],
-    }
-}

@@ -1,0 +1,16 @@
+[
+    {
+        "username": "you",
+        "avatar": "kitty1.png",
+        "id": "1696089176097", 
+        "passhash": "5e884898da28047151d0e56f8dc6292773603d0d6aabbdd62a11ef721d1542d8",
+        "token": "MTY5NjA4OTE3NjA5Nw==.e56f8dc629277360"
+    },
+    {
+        "username": "cyber student",
+        "avatar": "kitty2.jpg",
+        "id": "1696089176099", 
+        "passhash": "5e884898da28047151d0e56f8dc6292773603d0d6aabbdd62a11ef721d1542d8",
+        "token": "MTY5NjA4OTE3NjA5OQo=.e56f8dc62927rklew0"
+    }
+]
